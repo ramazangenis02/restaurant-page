@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 88vh;
 }
 
 .intro-title {
@@ -52,7 +52,25 @@ body {
 /* <- Landing Styles End -> */
 
 /*  <- Navbar Styles Start -> */
-.navbar-container {
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  margin: 40px 40px 0 40px;
+  padding: 10px;
+  display: block;
+}
+
+.nav-links:hover {
+  background: #3c3b3b;
 }
 /*  <- Navbar Styles End -> */
 
@@ -85,6 +103,10 @@ body {
   .intro-title {
     font-size: 3em;
   }
+
+  .nav-links {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 1076px) {
@@ -109,6 +131,10 @@ body {
   .intro-title {
     font-size: 1.8em;
   }
+
+  .nav-links {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 611px) {
@@ -123,6 +149,11 @@ body {
   }
   .intro-title {
     width: 100%;
+  }
+
+  .nav-links {
+    margin: 20px 20px 0 20px;
+    font-size: 15px;
   }
 }
 
