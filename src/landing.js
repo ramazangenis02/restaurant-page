@@ -1,5 +1,4 @@
 import "./style.css";
-
 const landingPage = (() => {
   const mainContent = document.querySelector("#content");
   const landingContainer = document.createElement("div");
@@ -13,16 +12,26 @@ const landingPage = (() => {
 
   landingContainer.appendChild(introContainer);
 
-  // const introTitleContainer = document.createElement("div");
-  // introTitleContainer.classList.add("intro-title-container");
-
-  // introContainer.appendChild(introTitleContainer);
-
   const introTitle = document.createElement("h1");
   introTitle.classList.add("intro-title");
   introTitle.innerText = "THE WORLD'S MOST-LOVED CAFE & RESTAURANT";
 
   introContainer.appendChild(introTitle);
+
+  const introContainerWrapper = document.querySelector(".intro-container");
+  const menuContainerWrapper = document.querySelector(".menu-container");
+
+  function landingFunc() {
+    if (!landingContainer.contains(introContainerWrapper)) {
+      landingContainer.appendChild(introContainerWrapper);
+    }
+
+    if (!mainContent.lastElementChild.classList.contains("landing-container")) {
+      mainContent.removeChild(mainContent.lastElementChild);
+    }
+  }
+
+  return { landingFunc };
 })();
 
 export default landingPage;

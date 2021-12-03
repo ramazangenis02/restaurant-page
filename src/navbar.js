@@ -13,10 +13,11 @@ const navBar = (() => {
   mainContent.appendChild(navBarContainer);
 
   const home = document.createElement("span");
-  const menu = document.createElement("menu");
-  const contact = document.createElement("contact");
+  const menu = document.createElement("span");
+  const contact = document.createElement("span");
 
   home.classList.add("nav-links");
+  home.classList.add("nav-active");
   menu.classList.add("nav-links");
   contact.classList.add("nav-links");
 
@@ -27,6 +28,12 @@ const navBar = (() => {
   navBarWrapper.appendChild(home);
   navBarWrapper.appendChild(menu);
   navBarWrapper.appendChild(contact);
+
+  return {
+    home,
+    menu,
+    contact,
+  };
 })();
 
 export default navBar;

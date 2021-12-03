@@ -9,7 +9,7 @@
 
 html,
 body {
-  height: 100%;
+  max-height: 100vh;
 }
 
 /* <- Global Styles End -> */
@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 88vh;
+  height: 85vh;
 }
 
 .intro-title {
@@ -63,16 +63,36 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 15px;
+  border-radius: 50px;
   margin: 40px 40px 0 40px;
   padding: 10px;
   display: block;
+  text-align: center;
 }
 
 .nav-links:hover {
-  background: #3c3b3b;
+  background: #41506b;
 }
+
+.nav-active {
+  background: #41506b !important;
+}
+
 /*  <- Navbar Styles End -> */
+
+/* <- Menu Styles Start -> */
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.menu-container img {
+  width: 70%;
+  border-radius: 50px;
+  height: 750px;
+}
+/* <- Menu Styles End -> */
 
 /* Responsive */
 @media only screen and (max-width: 1810px) {
@@ -107,6 +127,10 @@ body {
   .nav-links {
     font-size: 30px;
   }
+
+  .menu-container img {
+    width: 95%;
+  }
 }
 
 @media only screen and (max-width: 1076px) {
@@ -118,6 +142,10 @@ body {
 @media only screen and (max-width: 980px) {
   .intro-title {
     width: 80%;
+  }
+
+  .menu-container img {
+    height: 600px;
   }
 }
 
@@ -145,7 +173,7 @@ body {
 
 @media only screen and (max-width: 480px) {
   .intro-title {
-    font-size: 1.2em;
+    font-size: 1.2em !important;
   }
   .intro-title {
     width: 100%;
@@ -155,10 +183,25 @@ body {
     margin: 20px 20px 0 20px;
     font-size: 15px;
   }
+
+  .menu-container img {
+    height: 500px;
+    width: 95%;
+  }
+}
+
+@media only screen and (width: 495px) {
+  .intro-title {
+    font-size: 1.5em;
+  }
+
+  .menu-container img {
+    width: 95%;
+  }
 }
 
 @media only screen and (max-height: 800px) {
   .intro-container {
-    height: 600px;
+    height: 400px;
   }
 }
