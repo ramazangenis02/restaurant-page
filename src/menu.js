@@ -1,4 +1,4 @@
-import menuImg from "./img/Black and White Minimalist BBQ Menu.png";
+import menuImg from "./img/menu.png";
 function menuFunc() {
   const mainContent = document.querySelector("#content");
   const landingContainer = document.querySelector(".landing-container");
