@@ -1,6 +1,4 @@
 import menuImg from "./img/Black and White Minimalist BBQ Menu.png";
-import navBar from "./navbar";
-
 function menuFunc() {
   const mainContent = document.querySelector("#content");
   const landingContainer = document.querySelector(".landing-container");
@@ -24,16 +22,11 @@ function menuFunc() {
 
   menuContainer.appendChild(menuImgWrapper);
 
-  const navHome = navBar.home;
-  const navMenu = navBar.menu;
+  const contactContainer = document.querySelector(".contact-container");
 
-  if (!navMenu.classList.contains("nav-active")) {
-    mainContent.removeChild(menuContainerWrapper);
+  if (mainContent.contains(contactContainer)) {
+    mainContent.removeChild(contactContainer);
   }
-
-  return { menuContainerWrapper };
 }
 
-function menuFuncReset(e) {}
-
-export { menuFunc, menuFuncReset };
+export default menuFunc;

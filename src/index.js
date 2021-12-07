@@ -1,5 +1,6 @@
 import navBar from "./navbar";
-import { menuFuncReset, menuFunc } from "./menu";
+import menuFunc from "./menu";
+import contactFunc from "./contact";
 import landingPage from "./landing";
 
 const navHome = navBar.home;
@@ -13,8 +14,6 @@ navHome.addEventListener("click", () => {
   navContact.classList.remove("nav-active");
 
   landingPage.landingFunc();
-
-  menuFuncReset();
 });
 
 navMenu.addEventListener("click", () => {
@@ -31,4 +30,6 @@ navContact.addEventListener("click", () => {
 
   navMenu.classList.remove("nav-active");
   navHome.classList.remove("nav-active");
+
+  contactFunc();
 });
